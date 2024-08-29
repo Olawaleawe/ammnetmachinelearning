@@ -48,4 +48,8 @@ plot(Ada1bal$severe_maleria)
 #Using ADASYN can be particularly useful when you have a highly imbalanced dataset,
 #and you want to ensure that the classifier pays more attention to the difficult-to-learn minority class instances.
 
-
+#SMOTE
+#You can use ROSE for performing SMOTE
+Smotedata=ROSE(severe_maleria~., data=mdata, seed=123)$data
+plot(Smotedata$severe_maleria, ylim=c(0, 250))
+box()
